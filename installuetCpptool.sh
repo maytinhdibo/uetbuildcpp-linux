@@ -8,4 +8,5 @@ echo 'Bắt đầu cài đặt UET G++ Build Tool For Student'
 MY_PATH="`dirname \"$0\"`"
 tar -zxvf """${MY_PATH}"/uetcpp.vap""""
 sudo mv uetbuild-c++ /bin/
+sudo chmod +x /bin/uetbuild-c++
 echo "Hoàn tất cài đặt"
