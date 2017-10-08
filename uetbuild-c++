@@ -9,14 +9,14 @@
 
 filepath=$1
 filename=$(basename "$filepath")
-echo
-if [ ${#filepath} -eq 0 ]
-then
-echo "Error: No input file"
+
+if [ ${#filepath} -eq 0 ] then
+	echo "Error: No input file"
 else
-filebuild="."$filename".uetbuildc++"
-g++ $filepath -o $filebuild
-runbuild="./"$filebuild
-$runbuild
-rm $filebuild
+	# Compile the file
+	filebuild="."$filename".uetbuildc++"
+	g++ -O2 -std=c++11 -s -lm $filepath -o $filebuild
+	runbuild="./"$filebuild
+	$runbuild
+	rm $filebuild
 fi
