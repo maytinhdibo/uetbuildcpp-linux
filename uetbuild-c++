@@ -12,7 +12,7 @@ filename=$(basename "$filepath")
 echo
 if [ ${#filepath} -eq 0 ]
 then
-echo "Error: No file input"
+echo "Error: No input file"
 else
 filebuild="."$filename".uetbuildc++"
 g++ $filepath -o $filebuild
@@ -20,6 +20,3 @@ runbuild="./"$filebuild
 $runbuild
 rm $filebuild
 fi
-echo 
-echo "----------------------------------"
-echo "Process exited! Done."
