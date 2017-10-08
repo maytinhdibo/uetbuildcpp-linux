@@ -16,7 +16,9 @@ else
 	# Compile the file
 	filebuild="."$filename".uetbuildc++"
 	g++ -O2 -std=c++11 -s -lm $filepath -o $filebuild
+	# Run the file
 	runbuild="./"$filebuild
-	$runbuild
+	time $runbuild
+	# Exit
 	rm $filebuild
 fi
