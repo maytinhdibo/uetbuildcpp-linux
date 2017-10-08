@@ -1,0 +1,21 @@
+#!/bin/bash
+filepath=$1
+filename=$(basename "$filepath")
+echo "**********************************"
+echo "* UET g++ build tool for student *"
+echo "* Author: Tran Manh Cuong - K62  *"
+echo "**********************************"
+echo
+if [ ${#filepath} -eq 0 ]
+then
+echo "Error: No file input"
+else
+filebuild="."$filename".uetbuildc++"
+g++ $filepath -o $filebuild
+runbuild="./"$filebuild
+$runbuild
+rm $filebuild
+fi
+echo 
+echo "----------------------------------"
+echo "Process exited! Done."
